@@ -1,7 +1,12 @@
+import DemoScreenComp from "./demoScreen";
 import { HomeWrapper } from "./element";
 
 function HomeComp() {
-  return <HomeWrapper>Starrt kit - home comp</HomeWrapper>;
+  return (
+    <HomeWrapper>
+      <DemoScreenComp />
+    </HomeWrapper>
+  );
 }
 
 export default HomeComp;
