@@ -1,14 +1,11 @@
 import styled from "styled-components";
 
 export const DemoCompWrapper = styled.div`
-  overflow: hidden;
-  background: linear-gradient(107deg, #000 1.11%, #02274a 100%);
-  min-height: 100vh;
-  padding: 0 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 
   .ring-neck-text {
     color: #fff;
@@ -16,7 +13,6 @@ export const DemoCompWrapper = styled.div`
     font-size: 33px;
     font-style: normal;
     font-weight: 500;
-    line-height: normal;
     margin: 0;
     margin-top: 1rem;
   }
@@ -27,7 +23,6 @@ export const DemoCompWrapper = styled.div`
     font-size: 66px;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
     margin: 0;
   }
 
@@ -38,6 +33,7 @@ export const DemoCompWrapper = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin: 0;
     margin-top: 1rem;
   }
 `;
