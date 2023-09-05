@@ -6,8 +6,6 @@ export const SideCompWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex;
-  margin-top: 2rem;
-  width: 289px;
 
   .top-div {
     width: 100%;
