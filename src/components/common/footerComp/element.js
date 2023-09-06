@@ -5,12 +5,8 @@ export const FooterWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
   padding: 1rem 0rem;
-
-  @media (max-width: 575.98px) {
-    gap: 0.5rem;
-  }
 
   p {
     color: #4169e1;
