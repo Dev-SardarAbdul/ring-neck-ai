@@ -8,6 +8,10 @@ export const ChatWrapper = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   gap: 2rem;
+
+  @media (max-width: 575.98px) {
+    width: 100%;
+  }
 `;
 
 export const PlayBtnDiv = styled.div`
@@ -85,9 +89,13 @@ export const ChatContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  height: 400px;
+  max-height: 400px;
   overflow-y: auto !important ;
   padding-right: 1rem;
+
+  @media (max-width: 991.98px) {
+    max-height: 1000px;
+  }
 
   &::-webkit-scrollbar {
     width: 10px;
@@ -121,6 +129,11 @@ export const QuestionMessage = styled.p`
   font-weight: 500;
   line-height: normal;
   padding: 8px 2rem 8px 1rem;
+
+  @media (max-width: 575.98px) {
+    font-size: 16px;
+    font-weight: 400;
+  }
 `;
 
 export const AnswerMessage = styled.p`
@@ -135,4 +148,9 @@ export const AnswerMessage = styled.p`
   padding: 8px 2rem 8px 1rem;
   display: block;
   margin-left: auto;
+
+  @media (max-width: 575.98px) {
+    font-size: 16px;
+    font-weight: 400;
+  }
 `;

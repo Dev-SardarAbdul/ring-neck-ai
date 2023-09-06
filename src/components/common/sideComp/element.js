@@ -16,8 +16,25 @@ export const SideCompWrapper = styled.div`
     }
   }
 
+  .bird-img {
+    display: block;
+    margin: 1rem auto;
+    width: 119px;
+    height: 119px;
+
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+
   .select-div {
     position: relative;
+
+    @media (max-width: 991.98px) {
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 `;
 
@@ -57,13 +74,13 @@ export const DropdownDiv = styled.div`
   position: absolute;
   top: 50px;
   padding: 1rem 5px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: #556b7e;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1rem;
-  z-index: 100;
+  z-index: 200 !important;
 
   .inner-div {
     display: flex;
@@ -98,6 +115,14 @@ export const BtnsDiv = styled.div`
   align-items: flex-start;
   gap: 1.5rem;
   margin-top: 15rem;
+
+  @media (max-width: 991.98px) {
+    margin-top: 2rem;
+  }
+
+  @media (max-height: 800px) {
+    margin-top: 5rem;
+  }
 `;
 
 export const IndividualBtns = styled.button`
@@ -107,6 +132,13 @@ export const IndividualBtns = styled.button`
   border: 1px solid rgba(0, 0, 0, 0.1);
   position: relative;
   background-color: transparent;
+
+  @media (max-width: 991.98px) {
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   img {
     position: absolute;

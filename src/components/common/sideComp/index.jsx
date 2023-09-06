@@ -7,7 +7,12 @@ import {
   SideCompWrapper,
 } from "./element";
 import { Image } from "react-bootstrap";
-import { btnsRectangle, fourSeasonImg, usFlag } from "../../../assets";
+import {
+  btnsRectangle,
+  demoBird,
+  fourSeasonImg,
+  usFlag,
+} from "../../../assets";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { data } from "./data";
 import { AiOutlineQuestionCircle, AiOutlinePlus } from "react-icons/ai";
@@ -33,6 +38,7 @@ function SideComp() {
   return (
     <SideCompWrapper>
       <div className="top-div">
+        <Image src={demoBird} className="bird-img" />
         <Image src={fourSeasonImg} className="four-season-img" />
         <div className="select-div">
           <LanguageSelectDiv onClick={toggleDropdown}>

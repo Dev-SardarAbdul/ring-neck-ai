@@ -11,13 +11,25 @@ export const RecorderCompWrapper = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
     gap: 2rem;
+
+    @media (max-width: 991.98px) {
+      flex-direction: column;
+    }
   }
 
   .sidebar-div {
     width: 289px;
+
+    @media (max-width: 991.98px) {
+      width: 100%;
+    }
   }
 
   .main-content-div {
+    width: 100%;
+  }
+
+  .main-inner-div {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -32,6 +44,10 @@ export const RecorderCompWrapper = styled.div`
     width: 149px;
     height: 149px;
     z-index: 100;
+
+    @media (max-width: 991.98px) {
+      display: none;
+    }
   }
 `;
 

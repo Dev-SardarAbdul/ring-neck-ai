@@ -8,6 +8,10 @@ export const FooterWrapper = styled.div`
   gap: 1rem;
   padding: 1rem 0rem;
 
+  @media (max-width: 575.98px) {
+    gap: 0.5rem;
+  }
+
   p {
     color: #4169e1;
     font-size: 18px;
@@ -16,5 +20,9 @@ export const FooterWrapper = styled.div`
     line-height: normal;
     margin: 0;
     cursor: pointer;
+
+    @media (max-width: 575.98px) {
+      font-size: 16px;
+    }
   }
 `;
