@@ -24,21 +24,18 @@ export const PlayBtnDiv = styled.div`
     width: 100%;
     height: 100%;
     z-index: 10;
+    animation: spinAndGrowAnimation 6s linear infinite;
+    transform-origin: center;
 
-    &.rotate-svg {
-      animation: spinAndGrowAnimation 3s linear infinite;
-      transform-origin: center;
-
-      @keyframes spinAndGrowAnimation {
-        0% {
-          transform: rotate(0deg) scale(1);
-        }
-        50% {
-          transform: rotate(180deg) scale(1.05);
-        }
-        100% {
-          transform: rotate(360deg) scale(1);
-        }
+    @keyframes spinAndGrowAnimation {
+      0% {
+        transform: rotate(0deg) scale(1);
+      }
+      50% {
+        transform: rotate(180deg) scale(1.05);
+      }
+      100% {
+        transform: rotate(360deg) scale(1);
       }
     }
   }
