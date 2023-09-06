@@ -22,6 +22,7 @@ function SideComp() {
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectValue, setSelectValue] = useState("English");
   const [selectedFlag, setSelectedFlag] = useState(usFlag);
+  const toggleRef = useRef(null);
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
@@ -34,6 +35,20 @@ function SideComp() {
   };
 
   const filteredData = data.filter((item) => item.langauge !== selectValue);
+
+  const handleClickOutside = (event) => {
+    if (toggleRef.current && !toggleRef.current.contains(event.target)) {
+      setShowDropdown(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <SideCompWrapper>
@@ -49,7 +64,7 @@ function SideComp() {
             {showDropdown ? <IoIosArrowUp /> : <IoIosArrowDown />}
           </LanguageSelectDiv>
           {showDropdown && (
-            <DropdownDiv>
+            <DropdownDiv ref={toggleRef}>
               {filteredData?.map((item) => (
                 <div
                   className="inner-div"

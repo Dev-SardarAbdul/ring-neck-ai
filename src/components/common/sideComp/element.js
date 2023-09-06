@@ -94,7 +94,7 @@ export const DropdownDiv = styled.div`
     border-radius: 5px;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.75);
+      background-color: rgba(255, 255, 255, 0.25);
     }
 
     .language-name {
