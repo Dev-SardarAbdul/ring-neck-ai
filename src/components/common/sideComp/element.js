@@ -27,10 +27,30 @@ export const SideCompWrapper = styled.div`
     }
   }
 
+  .desktop-break {
+    display: block;
+    margin: 1rem auto;
+    width: 119px;
+    height: 119px;
+
+    @media (min-width: 1200px) {
+      display: none;
+    }
+  }
+
   .select-div {
     position: relative;
 
     @media (max-width: 991.98px) {
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .desktop-select-div {
+    position: relative;
+
+    @media (max-width: 1199.98px) {
       width: 300px;
       margin-left: auto;
       margin-right: auto;
@@ -116,6 +136,12 @@ export const BtnsDiv = styled.div`
   gap: 1.5rem;
   margin-top: 15rem;
 
+  &.desktop-btns-div {
+    @media (max-width: 1199.98px) {
+      margin-top: 2rem !important;
+    }
+  }
+
   @media (max-width: 991.98px) {
     margin-top: 2rem;
   }
@@ -132,6 +158,15 @@ export const IndividualBtns = styled.button`
   border: 1px solid rgba(0, 0, 0, 0.1);
   position: relative;
   background-color: transparent;
+
+  &.desktop-individual-btns {
+    @media (max-width: 1199.98px) {
+      width: 300px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 
   @media (max-width: 991.98px) {
     width: 300px;

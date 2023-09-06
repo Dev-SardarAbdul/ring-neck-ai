@@ -10,7 +10,7 @@ import {
 import { BiMicrophone } from "react-icons/bi";
 import { data } from "./data";
 
-function ChatComp() {
+function ChatComp({ isLastComp }) {
   const [isAnimating, setIsAnimating] = useState(false);
 
   const handleClick = () => {
@@ -20,7 +20,7 @@ function ChatComp() {
     }, 5000);
   };
   return (
-    <ChatWrapper>
+    <ChatWrapper className="last-comp-chat">
       <PlayBtnDiv>
         <svg
           className={`bg-svg ${isAnimating && "rotate-svg"}`}

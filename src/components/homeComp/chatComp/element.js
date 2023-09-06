@@ -9,6 +9,12 @@ export const ChatWrapper = styled.div`
   align-items: flex-start;
   gap: 2rem;
 
+  &.last-comp-chat {
+    @media (max-width: 1600px) {
+      width: 100%;
+    }
+  }
+
   @media (max-width: 575.98px) {
     width: 100%;
   }

@@ -1,6 +1,6 @@
 import GlobalStyle from "./globalStyles";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home } from "./pages";
+import { Home, LastComp } from "./pages";
 
 function App() {
   return (
@@ -9,7 +9,8 @@ function App() {
         <Router>
           <GlobalStyle />
           <Routes>
-            <Route path="/*" element={<Home />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/last-comp" element={<LastComp />} />
           </Routes>
         </Router>
       </div>

@@ -18,7 +18,7 @@ import { data } from "./data";
 import { AiOutlineQuestionCircle, AiOutlinePlus } from "react-icons/ai";
 import { BsCcCircle } from "react-icons/bs";
 
-function SideComp() {
+function SideComp({ isLastComp }) {
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectValue, setSelectValue] = useState("English");
   const [selectedFlag, setSelectedFlag] = useState(usFlag);
@@ -53,9 +53,12 @@ function SideComp() {
   return (
     <SideCompWrapper>
       <div className="top-div">
-        <Image src={demoBird} className="bird-img" />
+        <Image
+          src={demoBird}
+          className={` ${isLastComp ? "desktop-break" : "bird-img"}`}
+        />
         <Image src={fourSeasonImg} className="four-season-img" />
-        <div className="select-div">
+        <div className={` ${isLastComp ? "desktop-select-div" : "select-div"}`}>
           <LanguageSelectDiv onClick={toggleDropdown}>
             <div className="first-div">
               <Image src={selectedFlag} />
@@ -79,27 +82,35 @@ function SideComp() {
           )}
         </div>
       </div>
-      <BtnsDiv>
-        <IndividualBtns>
+      <BtnsDiv className={`${isLastComp && "desktop-btns-div"}`}>
+        <IndividualBtns
+          className={`${isLastComp && "desktop-individual-btns"}`}
+        >
           <Image src={btnsRectangle} width={"100%"} fluid />
           <span>
             <AiOutlinePlus /> New Conversation
           </span>
         </IndividualBtns>
-        <IndividualBtns>
+        <IndividualBtns
+          className={`${isLastComp && "desktop-individual-btns"}`}
+        >
           <Image src={btnsRectangle} width={"100%"} fluid />
           <span>
             <AiOutlineQuestionCircle /> FAQs
           </span>
         </IndividualBtns>
-        <IndividualBtns>
+        <IndividualBtns
+          className={`${isLastComp && "desktop-individual-btns"}`}
+        >
           <Image src={btnsRectangle} width={"100%"} fluid />
           <span>
             {" "}
             <AiOutlineQuestionCircle /> Help
           </span>
         </IndividualBtns>
-        <IndividualBtns>
+        <IndividualBtns
+          className={`${isLastComp && "desktop-individual-btns"}`}
+        >
           <Image src={btnsRectangle} width={"100%"} fluid />
           <span>
             <BsCcCircle /> Legal
