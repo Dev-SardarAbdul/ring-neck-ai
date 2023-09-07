@@ -27,6 +27,15 @@ export const RecorderCompWrapper = styled.div`
 
   .main-content-div {
     width: 100%;
+    padding-right: 15rem;
+
+    @media (max-width: 1600.98px) {
+      padding-right: 5rem;
+    }
+
+    @media (max-width: 1199.98px) {
+      padding-right: 0rem;
+    }
   }
 
   .main-inner-div {

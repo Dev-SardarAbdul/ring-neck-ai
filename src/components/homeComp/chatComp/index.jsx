@@ -20,7 +20,7 @@ function ChatComp({ isLastComp }) {
     }, 5000);
   };
   return (
-    <ChatWrapper className="last-comp-chat">
+    <ChatWrapper className={isLastComp && "last-comp-chat"}>
       <PlayBtnDiv>
         <svg
           className={`bg-svg ${isAnimating && "rotate-svg"}`}
