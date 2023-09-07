@@ -27,7 +27,7 @@ export const RecorderCompWrapper = styled.div`
   }
 
   .main-content-div {
-    width: 100%;
+    width: 500px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -38,6 +38,9 @@ export const RecorderCompWrapper = styled.div`
       top: auto;
       left: auto;
       transform: none;
+    }
+    @media (max-width: 991.98px) {
+      width: 100%;
     }
   }
 
