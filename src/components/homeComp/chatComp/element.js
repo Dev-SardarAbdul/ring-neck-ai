@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const ChatWrapper = styled.div`
   overflow: hidden;
-  width: 511px;
+  width: 480px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 2rem;
+  // gap: 2rem;
 
   &.last-comp-chat {
     @media (max-width: 1600px) {
@@ -21,8 +21,11 @@ export const ChatWrapper = styled.div`
 `;
 
 export const PlayBtnDiv = styled.div`
-  width: 264.129px;
-  height: 261.527px;
+    // width: 264.129px;
+    // height: 261.527px;
+ 
+  width: 185px;
+  height: 185px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -95,10 +98,10 @@ export const ChatContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  max-height: 400px;
+  max-height: 500px;
   overflow-y: auto !important ;
   padding-right: 1rem;
-
+  margin-top:0.5rem;
   @media (max-width: 991.98px) {
     max-height: 1000px;
   }
@@ -135,7 +138,7 @@ export const QuestionMessage = styled.p`
   font-weight: 500;
   line-height: normal;
   padding: 8px 2rem 8px 1rem;
-
+ 
   @media (max-width: 575.98px) {
     font-size: 16px;
     font-weight: 400;

@@ -85,7 +85,7 @@ export const LastCompWrapper = styled.div`
     border: 5px solid #4169e1;
     background: rgba(0, 0, 0, 0.22);
     padding: 3rem 1rem;
-    height: 780px;
+    // height: 780px;
     width: 552px;
 
     @media (max-width: 1600px) {
@@ -109,7 +109,7 @@ export const LastCompWrapper = styled.div`
     }
   }
 
-  .comp-wrapper {
+  .comp-border-div {
     display: flex;
     flex-direction: column;
     justify-content: center;

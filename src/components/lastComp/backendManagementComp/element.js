@@ -2,32 +2,39 @@ import styled from "styled-components";
 
 export const ManagementCompWrapper = styled.div`
   overflow: hidden;
+    q
 `;
 
 export const FrontendDeskDiv = styled.div`
-  width: 425.353px;
+  // width: 425.353px;
   border-radius: 22px;
   border: 2.5px solid #4169e1;
   background: rgba(0, 0, 0, 0.22);
-  display: block;
-  margin: 0 auto;
+  // display: block;
+  // margin: 0 auto;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-top: 3rem;
-
+ 
+  
+   &.frontService{
+    margin-top:2rem;
+   }
+   
   @media (max-width: 575.98px) {
     width: 100%;
   }
 
   .bell-icon {
     position: absolute;
-    left: 162px;
-    top: -50px;
-    z-index: 100;
+    //  left: 150px;
+    top: -35px;
+     z-index: 100;
+  
+    
 
     @media (max-width: 575.98px) {
       left: 40%;
@@ -40,7 +47,7 @@ export const FrontendDeskDiv = styled.div`
   .main-text {
     color: #fff;
     text-align: center;
-    font-size: 29px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -51,7 +58,7 @@ export const FrontendDeskDiv = styled.div`
   .sub-text {
     color: #fff;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -60,7 +67,7 @@ export const FrontendDeskDiv = styled.div`
 `;
 
 export const RoomServiceDiv = styled(FrontendDeskDiv)`
-  margin-top: 7rem;
+  margin-top: 3.2rem;
 `;
 
 export const StatusBtn = styled.div`
@@ -95,7 +102,8 @@ export const BottomBtn = styled.div`
   margin-left: auto;
   margin-right: auto;
   width: 273px;
-  height: 31px;
+  // height: 31px;
+  padding:0.2rem;
   border-radius: 22px;
   opacity: 0.44;
   background: #fff;

@@ -4,9 +4,8 @@ import { FooterWrapper } from "./element";
 function FooterComp() {
   return (
     <FooterWrapper>
-      <p>Terms of service</p>
-      <p>|</p>
-      <p>Privacy Policy</p>
+      <p className="text-center">Terms of service | Privacy Policy</p>
+     
     </FooterWrapper>
   );
 }

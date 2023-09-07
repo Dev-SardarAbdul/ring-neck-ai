@@ -13,8 +13,8 @@ import { IoIosArrowDown } from "react-icons/io";
 function ManagementComp() {
   return (
     <ManagementCompWrapper>
-      <FrontendDeskDiv>
-        <Image src={bellIcon} className="bell-icon" />
+      <FrontendDeskDiv  className="frontService">
+        <Image src={bellIcon} width={70} height={70} className="bell-icon" />
         <h2 className="main-text">Front Desk</h2>
         <p className="sub-text">Room number 478 </p>
         <p className="sub-text">Late check-out: 3:00pm</p>
@@ -25,7 +25,7 @@ function ManagementComp() {
       </StatusBtn>
       <BottomBtn>Pending</BottomBtn>
       <RoomServiceDiv>
-        <Image src={roomServiceGroup} className="bell-icon" />
+        <Image src={roomServiceGroup} width={70} height={70}  className="bell-icon" />
         <h2 className="main-text">Room Service</h2>
         <p className="sub-text">Room number 478 </p>
         <p className="sub-text">Order: Club Sandwich & Orange juice </p>
