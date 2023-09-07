@@ -10,10 +10,20 @@ import {
 import { Image } from "react-bootstrap";
 import { bellIcon, roomServiceGroup } from "../../../assets";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { Select, Space } from "antd";
 
 function ManagementComp() {
-  const [showTopDropdown, setShowTopDropdown] = useState(false);
-  const [showBottomDropdown, setShowBottomDropdown] = useState(false);
+  const [selectedStatus, setSelectedStatus] = useState(null);
+  const [selectedBottomStatus, setSelectedBottomStatus] = useState(null);
+
+  const handleStatusChange = (value) => {
+    setSelectedStatus(value);
+  };
+  const handleBottomStatusChange = (value) => {
+    setSelectedBottomStatus(value);
+  };
+
+  const Option = Select;
   return (
     <ManagementCompWrapper>
       <FrontendDeskDiv className="frontService">
@@ -23,19 +33,19 @@ function ManagementComp() {
         <p className="sub-text">Late check-out: 3:00pm</p>
       </FrontendDeskDiv>
       <div className="dropdown-div-wrapper">
-        <StatusBtn onClick={() => setShowTopDropdown(!showTopDropdown)}>
-          Status: Confirmed
-          {showTopDropdown ? <IoIosArrowUp /> : <IoIosArrowDown />}
-        </StatusBtn>
-
-        {showTopDropdown && (
-          <DrodpownDiv>
-            <p className="option">Option 1</p>
-            <p className="option">Option 2</p>
-            <p className="option">Option 3</p>
-            <p className="option">Option 4</p>
-          </DrodpownDiv>
-        )}
+        <Select
+          bordered={false}
+          placeholder="Select Status"
+          onChange={handleStatusChange}
+          value={selectedStatus ? `Status: ${selectedStatus}` : undefined}
+          style={{
+            width: "100%",
+            marginTop: "1rem",
+          }}
+        >
+          <Option value="Pending">Pending</Option>
+          <Option value="Completed">Completed</Option>
+        </Select>
         <BottomBtn>Pending</BottomBtn>
       </div>
       <RoomServiceDiv>
@@ -50,20 +60,21 @@ function ManagementComp() {
         <p className="sub-text">Order: Club Sandwich & Orange juice </p>
       </RoomServiceDiv>
       <div className="dropdown-div-wrapper">
-        <StatusBtn onClick={() => setShowBottomDropdown(!showBottomDropdown)}>
-          Status: Confirmed
-          {showBottomDropdown ? <IoIosArrowUp /> : <IoIosArrowDown />}
-        </StatusBtn>
-
-        {showBottomDropdown && (
-          <DrodpownDiv>
-            <p className="option">Option 1</p>
-            <p className="option">Option 2</p>
-            <p className="option">Option 3</p>
-            <p className="option">Option 4</p>
-          </DrodpownDiv>
-        )}
-
+        <Select
+          bordered={false}
+          placeholder="Select Status"
+          onChange={handleBottomStatusChange}
+          value={
+            selectedBottomStatus ? `Status: ${selectedBottomStatus}` : undefined
+          }
+          style={{
+            width: "100%",
+            marginTop: "1rem",
+          }}
+        >
+          <Option value="Pending">Pending</Option>
+          <Option value="Completed">Completed</Option>
+        </Select>
         <BottomBtn>Pending</BottomBtn>
       </div>
     </ManagementCompWrapper>

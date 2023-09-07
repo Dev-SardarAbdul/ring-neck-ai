@@ -10,8 +10,11 @@ export const LastCompWrapper = styled.div`
     padding: 0 8px 4rem 8px;
   }
 
+  @media (max-width: 991.98px) {
+    padding: 0 2rem 4rem 2rem;
+  }
   @media (max-width: 575.98px) {
-    padding: 0 8px;
+    padding: 0 8px 4rem 8px;
   }
 
   .content-wrapper {
@@ -88,6 +91,13 @@ export const LastCompWrapper = styled.div`
     padding: 3rem 1rem;
     // height: 780px;
     width: 552px;
+    min-height: 680px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
 
     @media (max-width: 1600px) {
       width: 450px;
@@ -100,9 +110,13 @@ export const LastCompWrapper = styled.div`
     @media (max-width: 1199.98px) {
       width: 450px;
     }
+
     @media (max-width: 991.98px) {
-      width: 100%;
+      width: 500px;
       height: auto;
+    }
+    @media (max-width: 575.98px) {
+      width: 100%;
     }
 
     &.second-border-div {
@@ -110,15 +124,8 @@ export const LastCompWrapper = styled.div`
     }
   }
 
-  .comp-border-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 2rem;
-
-    @media (max-width: 991.98px) {
+  .comp-wrapper {
+    @media (max-width: 575.98px) {
       width: 100%;
     }
   }
