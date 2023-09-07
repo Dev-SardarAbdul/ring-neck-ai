@@ -37,6 +37,7 @@ export const LastCompWrapper = styled.div`
 
   .main-content-div {
     width: 100%;
+    margin-top: 3rem;
   }
 
   .main-inner-div {

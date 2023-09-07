@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const RecorderCompWrapper = styled.div`
   overflow: hidden;
   margin-top: 2rem;
-  min-height: calc(100vh - 2rem - 4rem);
   position: relative;
 
   .content-wrapper {
@@ -11,6 +10,8 @@ export const RecorderCompWrapper = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
     gap: 2rem;
+    position: relative;
+    min-height: calc(100vh - 2rem);
 
     @media (max-width: 991.98px) {
       flex-direction: column;
@@ -27,14 +28,16 @@ export const RecorderCompWrapper = styled.div`
 
   .main-content-div {
     width: 100%;
-    padding-right: 15rem;
-
-    @media (max-width: 1600.98px) {
-      padding-right: 5rem;
-    }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     @media (max-width: 1199.98px) {
-      padding-right: 0rem;
+      position: static;
+      top: auto;
+      left: auto;
+      transform: none;
     }
   }
 
