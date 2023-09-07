@@ -2,7 +2,18 @@ import styled from "styled-components";
 
 export const ManagementCompWrapper = styled.div`
   overflow: hidden;
-    q
+
+  .dropdown-div-wrapper {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 273px;
+    position: relative;
+
+    @media (max-width: 350.98px) {
+      width: 100%;
+    }
+  }
 `;
 
 export const FrontendDeskDiv = styled.div`
@@ -18,12 +29,11 @@ export const FrontendDeskDiv = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
- 
-  
-   &.frontService{
-    margin-top:2rem;
-   }
-   
+
+  &.frontService {
+    margin-top: 2rem;
+  }
+
   @media (max-width: 575.98px) {
     width: 100%;
   }
@@ -32,9 +42,7 @@ export const FrontendDeskDiv = styled.div`
     position: absolute;
     //  left: 150px;
     top: -35px;
-     z-index: 100;
-  
-    
+    z-index: 100;
 
     @media (max-width: 575.98px) {
       left: 40%;
@@ -71,10 +79,6 @@ export const RoomServiceDiv = styled(FrontendDeskDiv)`
 `;
 
 export const StatusBtn = styled.div`
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 277.196px;
   height: 42.082px;
   border-radius: 22px;
   border: 0.6px solid #4169e1;
@@ -91,19 +95,12 @@ export const StatusBtn = styled.div`
   align-items: center;
   gap: 1rem;
   cursor: pointer;
-
-  @media (max-width: 350.98px) {
-    width: 100%;
-  }
 `;
 
 export const BottomBtn = styled.div`
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 273px;
+  width: 100%;
   // height: 31px;
-  padding:0.2rem;
+  padding: 0.2rem;
   border-radius: 22px;
   opacity: 0.44;
   background: #fff;
@@ -114,8 +111,53 @@ export const BottomBtn = styled.div`
   font-weight: 400;
   line-height: normal;
   margin-top: 1rem;
+`;
 
-  @media (max-width: 350.98px) {
-    width: 100%;
+export const DrodpownDiv = styled.div`
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  z-index: 200;
+  max-height: 200px;
+  border-radius: 10px;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.2);
+  background-color: rgb(1, 6, 11);
+  border: 0.6px solid #4169e1;
+  overflow-y: auto !important;
+  cursor: default;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #02274a;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #02274a;
+  }
+
+  .option {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    text-align: left;
+    margin-top: 10px;
+    cursor: pointer;
   }
 `;
